@@ -16,8 +16,10 @@ export default {
       default: 5
     },
     // NOTE: This property may be called from storybook
-    isDebug: Boolean,
-    default: false
+    isDebug: {
+      type: Boolean,
+      default: false
+    } 
   },
   data () {
     return {
@@ -77,13 +79,8 @@ export default {
       }
     },
     handleResize () {
-      const canvas = this.canvas
-
-      if (canvas && canvas.parentNode && canvas.parentNode.id === 'root') {
-        // NOTE: Reset canvas size fit debug window
-        this.resetCanvasSize ()
-        this.createSentences()
-      }
+      this.resetCanvasSize ()
+      this.createSentences()
     },
     loopAnimation: function () {
       this.clearCanvas()

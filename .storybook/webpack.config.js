@@ -4,7 +4,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.styl$/,
         include: path.resolve(__dirname, '../src')
       }
     ]

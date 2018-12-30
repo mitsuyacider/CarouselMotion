@@ -19,7 +19,7 @@ export default {
     isDebug: {
       type: Boolean,
       default: false
-    } 
+    }
   },
   data () {
     return {
@@ -65,7 +65,7 @@ export default {
       this.sentenceList = []
 
       const fontSize = Math.floor((this.canvas.width - this.column * this.lineSpace) / this.column)
-      // NOTE: Create sentence every 
+      // NOTE: Create sentence every
       for (let i = 0; i < this.column; i++) {
         const x = (fontSize + this.lineSpace) * i
         const sentence = new Lane()
@@ -79,7 +79,7 @@ export default {
       }
     },
     handleResize () {
-      this.resetCanvasSize ()
+      this.resetCanvasSize()
       this.createSentences()
     },
     loopAnimation: function () {
